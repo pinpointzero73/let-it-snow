@@ -1,0 +1,56 @@
+{
+  "name": "festive-snow",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Canvas-based festive snow effect with Santa's sleigh, reindeer, and decorated Christmas trees. Zero dependencies, framework agnostic.",
+  "main": "dist/festive-snow.js",
+  "module": "dist/festive-snow.esm.js",
+  "types": "types/index.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "types",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "snow",
+    "christmas",
+    "festive",
+    "canvas",
+    "animation",
+    "holiday",
+    "xsnow",
+    "santa",
+    "reindeer",
+    "winter",
+    "particle-system",
+    "vanilla-js",
+    "zero-dependency",
+    "ui-component",
+    "seasonal"
+  ],
+  "author": "Darryl Waterhouse",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/let-it-snow.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/let-it-snow/issues"
+  },
+  "homepage": "https://github.com/yourusername/let-it-snow#readme",
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^3.29.4",
+    "rollup-plugin-css-only": "^4.5.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
