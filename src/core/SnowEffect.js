@@ -855,23 +855,6 @@ export class SnowEffect {
     ctx.stroke();
     ctx.restore();
 
-    // Snow accumulation
-    if (particle.snowLevel > 0) {
-      ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
-      for (let i = 0; i < 3; i++) {
-        const layerY = i * size * 0.4;
-        const layerSize = size * (1.2 - i * 0.2);
-        const snowHeight = particle.snowLevel * (1 - i * 0.2);
-        if (snowHeight > 0.5) {
-          ctx.beginPath();
-          ctx.moveTo(-layerSize, size * 0.3 - layerY);
-          ctx.quadraticCurveTo(0, size * 0.3 - layerY - snowHeight, layerSize, size * 0.3 - layerY);
-          ctx.closePath();
-          ctx.fill();
-        }
-      }
-    }
-
     ctx.restore();
   }
 
@@ -935,17 +918,6 @@ export class SnowEffect {
     ctx.beginPath();
     ctx.arc(0, bowY, size * 0.2, 0, Math.PI * 2);
     ctx.fill();
-
-    // Snow accumulation
-    if (particle.snowLevel > 0.1) {
-      ctx.beginPath();
-      ctx.arc(0, -size, size * 0.8, 0, Math.PI, true);
-      ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
-      ctx.shadowColor = 'rgba(255, 255, 255, 0.5)';
-      ctx.shadowBlur = 5;
-      ctx.fill();
-      ctx.shadowBlur = 0;
-    }
 
     ctx.restore();
   }
